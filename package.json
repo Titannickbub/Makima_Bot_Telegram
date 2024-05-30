@@ -1,0 +1,29 @@
+{
+  "name": "Makima",
+  "version": "1.0.0",
+  "description": "Bot de telegram em desenvolvimento, por Titannickbub.",
+  "main": "ligar.js",
+  "scripts": {
+    "test": "node ligar.js",
+    "start": "sh start.sh"
+  },
+  "keywords": [
+    "telegram_bot"
+  ],
+  "author": "@titannickbub",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.5.1",
+    "colors": "^1.4.0",
+    "define-properties": "1.2.1",
+    "fluent-ffmpeg": "^2.1.2",
+    "form-data": "^4.0.0",
+    "fs-extra": "^11.1.1",
+    "linkifyjs": "^4.1.0",
+    "node-fetch": "^2.6.7",
+    "moment-timezone": "^0.5.40",
+    "node-telegram-bot-api": "github:yagop/node-telegram-bot-api",
+    "request": "^2.88.2",
+    "cfonts": "3.2.0"
+  }
+}
