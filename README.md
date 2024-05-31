@@ -20,5 +20,5 @@ Este é um bot de WhatsApp multifuncional que oferece várias funcionalidades.
 Site do criador com tutorial de como instalar e configurar:
 
 <p align="center">
-  <a href="https://titannickbub.neocities.org/"><img title="Autor" src="https://img.shields.io/badge/Autor-Titannickbub-blue.svg?style=for-the-badge&logo=telegram" /></a>
+  <a href="https://titannickbub.neocities.org/makima.html"><img title="Autor" src="https://img.shields.io/badge/Autor-Titannickbub-blue.svg?style=for-the-badge&logo=telegram" /></a>
   <h4 align="center">
