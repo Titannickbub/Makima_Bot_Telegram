@@ -279,6 +279,10 @@ ${pfx}AntiNomeMod
 Ou use o botão que esta no menu de adms
 
 ******************************
+📨 MENSAGENS
+
+ℹ️Caso não queira que a função fique mandando mensagem a cada usuário removido, clique no botão ao lado do ANTI-NOMES-MOD
+******************************
 🚫 PUNIÇÕES
 
 ⚠️ É nescessário configurar a punição desse recurso, caso contrário ele não irá fazer nada mesmo ativo
