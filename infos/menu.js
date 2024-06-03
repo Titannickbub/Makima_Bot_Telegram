@@ -94,6 +94,17 @@ As opções que não possuem um comando para editar são alteradas automaticamen
 `
 }
 
+const pesquisas = (pfx, myconta) => {
+  return `
+Aqui está o menu de pesquisas ${myconta.nome2}
+******************************
+🔎 PESQUISAS 
+
+${pfx}Celular Note 13
+${pfx}LetraMusic WTF 2
+******************************
+`
+}
 // DOWLOADS
 const donwloads_ft = (pfx, myconta) => {
 return `
@@ -253,6 +264,16 @@ return `
 `
 }
 
+//EXTRAIR O NOME PARA COLOCAR NO ARQUIVO
+function extrairTitulo(texto) {
+  const regex = /🏷️ Título: (.*?)\s*⏳ Duração:/;
+  const resultado = texto.match(regex);
+  if (resultado && resultado[1]) {
+    return resultado[1].trim();
+  }
+  return "Play_music";
+}
+
 const leg_logos = (pfx, myconta) => {
   return `
 Essas são as logos ${myconta.nome2}
@@ -260,6 +281,35 @@ Essas são as logos ${myconta.nome2}
 Você também pode digita-las como um comando 
 
 Por exemplo ${pfx}Neon makima
+`
+}
+///////////////// PESQUISAS \\\\\\\\\\\\\
+//PESQUISA DE CELULAR
+const celular = (pfx, myconta, celula, infocelula) => {
+  return `
+******************************
+📱Celular : ${celula}
+******************************
+❓Informações:
+${infocelula}
+******************************
+`
+}
+
+//LETRA DE MÚSICA 
+const letramusic = (pfx, myconta, titulo, compositor, letram) => {
+  return `
+******************************
+🎼Letra da música
+******************************
+🎵 Música: ${titulo}
+
+👨🏻‍🎤Artista: ${compositor}
+******************************
+🎶Letra:
+
+${letram}
+******************************
 `
 }
 ///////////////// INFOS \\\\\\\\\\\\\\\\\\
@@ -445,13 +495,15 @@ ${pfx}Play Wtf 2
 }
 
 // Erro ao encontrar música em todos os plays
-const error_play = (pfx, q, comando, myconta) => {
+const error_play = (pfx, q, comando, myconta, error) => {
   return `
 ⚠️Ocorreu um erro durante o processo... Tente usar uma música diferente, ou use o comando ${pfx}Spotify
 
-Caso tenha usado um link do YouTube, tente pegar o link pelo botão abaixo..
+ℹ️ Esse erro pode ocorrer ao baixar um vídeo ou música maior que 50 mbs , ou que possua restrição de idade
 
 o link deve ser no formato youtu.be
+
+Motivo do erro: ${error}
 
 ℹ️Se o erro persistir consute o criador do bot.
 `
@@ -822,5 +874,6 @@ error_idd, txt_idd_edited, txt_error_gen, txt_gen_edited, txt_error_sx, txt_sx_e
 txt_banido, txt_noQ_bmdt, txt_mutado, y_token, no_token, error_play,
 error_sptfy, error_insta, txt_mute_nomemod, txt_kick_nomemod, txt_ban_nomemod, punir_antinomemod,
 msg_bot_noadm, msg_ping, msg_sodono, menu_dono, txt_notQ_pfx, msg_prefix_set, reset_token, reset_dono,
-new_apikey, txt_notQ_key, info_antinomemod
+new_apikey, txt_notQ_key, info_antinomemod, pesquisas, celular,
+extrairTitulo, letramusic
 };
